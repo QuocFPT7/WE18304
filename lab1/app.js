@@ -5,4 +5,4 @@ let b = prompt ("Nhap so nguyen  b : ");
 //nhap b tu ban phim
 let c = parseInt(a)+parseInt(b);
 document.write(c);
-console.log(C);
+console.log(c);
