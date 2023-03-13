@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Khởi tạo mảng ban đầu
+ let days = ["Tue", "Thu", "Sat", "Nine"];
+
+ // Thêm các phần tử vào mảng
+ days.splice(0, 0, "Mon"); // Thêm "Mon" vào đầu mảng
+ days.splice(2, 0, "Wed"); // Thêm "Wed" vào vị trí thứ 3 trong mảng
+ days.splice(4, 0, "Fri"); // Thêm "Fri" vào vị trí thứ 5 trong mảng
+ days.push("Sun"); // Thêm "Sun" vào cuối mảng
+
+ // Xóa phần tử "Nine" khỏi mảng
+ let index = days.indexOf("Nine");
+ if (index !== -1) {
+  days.splice(index, 1);
+ }
+
+// Hiển thị kết quả 
+console.log(days);
+    </script>
+    
+</body>
+</html>

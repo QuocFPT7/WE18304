@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     let a = parseInt(prompt("Nhập  a: "));
+     let b = parseInt(prompt("Nhập  b: "));
+     let c = parseInt(prompt("Nhập  c: "));
+  //Kiem tra 
+  if(a==0){
+    let x = -c/b;
+    document.write("Phuong trinh co 1 nghiem : "+ x);
+  }else {
+    let delta =Math.pow(b,2)- 4*a*c;
+    if(delta < 0){
+        document.write("Phuong trinh vo nghiem " );
+
+    }else if(delta==0){
+        let x =-b/(2*a);
+        document.write("Phuong trinh co nghiem kep : " + x );
+    }else{
+        let x1 =(-b +Math.sqrt(delta))/(2*a);
+      
+        let x2 =(-b -Math.sqrt(delta))/(2*a);
+        document.write("Phuong trinh co 2 nghiem x1= x2"  +x1  +x2);
+    }
+  }
+    </script>
+    
+</body>
+</html>
