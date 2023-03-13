@@ -7,25 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        // Khởi tạo mảng ban đầu
- let days = ["Tue", "Thu", "Sat", "Nine"];
+    <script>    // Tạo mảng 
+        let thuNgay = ["Tue", "Thu", "Sat", "Nine"];
 
- // Thêm các phần tử vào mảng
- days.splice(0, 0, "Mon"); // Thêm "Mon" vào đầu mảng
- days.splice(2, 0, "Wed"); // Thêm "Wed" vào vị trí thứ 3 trong mảng
- days.splice(4, 0, "Fri"); // Thêm "Fri" vào vị trí thứ 5 trong mảng
- days.push("Sun"); // Thêm "Sun" vào cuối mảng
+        // Thêm các phần tử 
+        thuNgay.splice(0, 0, "Mon");
+        thuNgay.splice(2, 0, "Wed");
+        thuNgay.splice(4, 0, "Fri");
+        thuNgay.splice(6, 1, "Sun");
 
- // Xóa phần tử "Nine" khỏi mảng
- let index = days.indexOf("Nine");
- if (index !== -1) {
-  days.splice(index, 1);
- }
+        // In kết quả 
+        console.log('Xuat chuoi ngay trong tuan: ' + thuNgay);
 
-// Hiển thị kết quả 
-console.log(days);
-    </script>
-    
+        document.write('Xuat chuoi ngay trong tuan: ' + thuNgay);
+        </script>
 </body>
 </html>
