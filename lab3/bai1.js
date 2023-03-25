@@ -28,18 +28,10 @@ function tinhDiemTrungBinhIfElse() {
   let sinh = parseFloat(prompt("Nhap diem Sinh: "));
 
   if (
-    toan < 0 ||
-    toan > 10 ||
-    isNaN(toan) ||
-    ly < 0 ||
-    ly > 10 ||
-    isNaN(ly) ||
-    hoa < 0 ||
-    hoa > 10 ||
-    isNaN(hoa) ||
-    sinh < 0 ||
-    sinh > 10 ||
-    isNaN(sinh)
+    toan < 0 || toan > 10 || isNaN(toan) ||
+      ly < 0 ||ly > 10 ||  isNaN(ly) ||
+       hoa < 0 || hoa > 10 || isNaN(hoa) ||
+    sinh < 0 || sinh > 10 || isNaN(sinh)
   ) {
     alert("Nhap sai diem!");
     return;
