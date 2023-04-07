@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bai1.css">
+</head>
+<body>
+    <div class="slider">
+        <div class="slider-item" data-caption="Caption 1">
+          <img src="img/slide.jpg" alt="Image 1">
+        </div>
+        <div class="slider-item" data-caption="Caption 2">
+          <img src="img/slide1.jpg" alt="Image 2">
+        </div>
+        <div class="slider-item" data-caption="Caption 3">
+          <img src="img/slide2.jpg" alt="Image 3">
+        </div>
+        <div class="slider-item" data-caption="Caption 4">
+          <img src="img/slide3.jpg" alt="Image 4">
+        </div>  
+      </div>
+      
+      <div class="slider-controls">
+        <button class="prev-btn">&#10094;</button>  
+        <div class="dots">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <button class="next-btn">&#10095;</button>
+      </div>
+      <script>
+        $(document).ready(function() {
+  var $slider = $('.slider');
+  var $sliderItems = $slider.find('.slider-item');
+  var $prevBtn = $('.prev-btn');
+  var $nextBtn = $('.next-btn');
+  var $dots = $('.dot');
+
+  var currentSlide = 0;
+  var numSlides = $sliderItems.length;
+
+  // Set initial active slide
+  $sliderItems.eq(currentSlide).addClass('active');
+
+  // Set initial active dot
+  $dots.eq(currentSlide).addClass('active');
+
+  // Handle previous button click
+  $prevBtn.click
+
+      </script>
+</body>
+</html>

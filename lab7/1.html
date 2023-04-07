@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 50%;
+            background-color:bisque;
+            padding: 10px;
+            display: flex;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+        .main{
+            display: flex;
+            flex-direction: row;
+            padding: 5px;
+        }
+        .leftc{
+            width: 150px;
+            height: 250px;
+            border: 3px solid sandybrown;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .rightc{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+        }
+        .item{
+            padding: 2px 20px 2px 20px;
+            border: 1px dashed;
+            margin: 3px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <p></p>
+    <div class="main">
+        <div class="leftc" id="bin" style="text-align: center;">
+            bin
+          </div>
+        <div class="rightc">
+            <span class="item" id="one">One</span>
+            <span class="item" id="two">Two</span>
+            <span class="item" id="three">Three</span>
+            <span class="item" id="four">Four</span>
+            <span class="item" id="five">Five</span>
+        </div> 
+    </div>
+    </div>  
+    <script>
+        let items =document.getElementsByClassName("item");
+        for (let i =0;i <items.length; i++){
+            let item =items[i];
+            item.setAttribute("draggable",true);
+            item.addEventListener("dragstart",(e)=> {
+                e.dataTransfer.setData("itemId",item.id);
+                
+            })
+        }
+        let bin =document.getElementById("bin");
+        bin.addEventListener("dragover",(e) =>{
+       if (e.preventDefault)  e.preventDefault();
+        });
+        
+        bin.addEventListener("drop",(e)=>{
+    e.preventDefault();
+    let itemId = e.dataTransfer.getData("itemId");
+    let item = document.getElementById(itemId);
+    bin.appendChild(item);
+});
+
+    </script>
+    
+</body>
+</html>
