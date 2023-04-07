@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Video Player</title>
+</head>
+<body>
+	<video id="myVideo" width="640" height="360">
+		<source src="video/y2mate.com - THẰNG ĐIÊN  JUSTATEE x PHƯƠNG LY  OFFICIAL MV_1080p.mp4" type="video/mp4">
+		<source src="path/to/video.webm" type="video/webm">
+	
+	</video>
+	<br>
+	<button onclick="playVideo()">Play</button>
+	<button onclick="pauseVideo()">Pause</button>
+	<button onclick="stopVideo()">Stop</button>
+	<button onclick="volumeUp()">Volume Up</button>
+	<button onclick="volumeDown()">Volume Down</button>
+	<button onclick="toggleLoop()">Toggle Loop</button>
+
+	<script>
+		var video = document.getElementById("myVideo");
+
+		function playVideo() {
+			video.play();
+		}
+
+		function pauseVideo() {
+			video.pause();
+		}
+
+		function stopVideo() {
+			video.pause();
+			video.currentTime = 0;
+		}
+
+		function volumeUp() {
+			if (video.volume < 1) {
+				video.volume += 0.1;
+			}
+		}
+
+		function volumeDown() {
+			if (video.volume > 0) {
+				video.volume -= 0.1;
+			}
+		}
+
+		function toggleLoop() {
+			video.loop = !video.loop;
+		}
+	</script>
+</body>
+</html>
