@@ -15,7 +15,7 @@
   }
   
   .slider__item.active {
-    opacity: 1;
+    opacity: 1; 
   }
   
   .slider__item img {
@@ -56,4 +56,4 @@
   
   .slider__position {
     text-align: center
-  
+  }

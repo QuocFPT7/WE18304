@@ -1,58 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="bai1.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bannermt-3{
+margin-top: 200px;  
+}
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners img {
+  width: 150px;
+  height: auto;
+  margin: 200px;
+}
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners img {
+  width: 150px;
+  height: auto;
+  margin: 10px;
+}
+  </style>
 </head>
 <body>
-    <div class="slider">
-        <div class="slider-item" data-caption="Caption 1">
-          <img src="img/slide.jpg" alt="Image 1">
-        </div>
-        <div class="slider-item" data-caption="Caption 2">
-          <img src="img/slide1.jpg" alt="Image 2">
-        </div>
-        <div class="slider-item" data-caption="Caption 3">
-          <img src="img/slide2.jpg" alt="Image 3">
-        </div>
-        <div class="slider-item" data-caption="Caption 4">
-          <img src="img/slide3.jpg" alt="Image 4">
-        </div>  
-      </div>
+  <section class="bannermt-3 " style="margin: 50px;">
+    <div class="container" style="">
+        <!-- Carousel -->
       
-      <div class="slider-controls">
-        <button class="prev-btn">&#10094;</button>  
-        <div class="dots">
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-        </div>
-        <button class="next-btn">&#10095;</button>
+        <div id="demo" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+ 
+
+    <div class="carousel-indicators">
+      <button  data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button  data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button  data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/slide1.jpg" alt="Los Angeles" class="d-block w-100">
       </div>
-      <script>
-        $(document).ready(function() {
-  var $slider = $('.slider');
-  var $sliderItems = $slider.find('.slider-item');
-  var $prevBtn = $('.prev-btn');
-  var $nextBtn = $('.next-btn');
-  var $dots = $('.dot');
-
-  var currentSlide = 0;
-  var numSlides = $sliderItems.length;
-
-  // Set initial active slide
-  $sliderItems.eq(currentSlide).addClass('active');
-
-  // Set initial active dot
-  $dots.eq(currentSlide).addClass('active');
-
-  // Handle previous button click
-  $prevBtn.click
-
-      </script>
+      <div class="carousel-item">
+        <img src="img/slide2.jpg" alt="Chicago" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="img/slide3.jpg" alt="New York" class="d-block w-100">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+    </div>  
+   
+    
+    
+</section>
 </body>
 </html>

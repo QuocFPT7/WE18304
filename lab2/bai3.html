@@ -12,11 +12,12 @@
        
         let hoTen = prompt("Nhập vào họ và tên:");
         let gioiTinh = prompt("Nhập vào giới tính (Nam/Nữ):");
-
+//tach chuoi
         let hten = hoTen.split(" ");
         let ho = hten[0];
         let tenDem = hten.slice(1, hten.length - 1).join(" ");
         let ten = hten[hten.length - 1];
+    // in ra 3 gia tri ho,ten dem va ten rieng  
 
         console.log("Họ: " + ho);
         console.log("Tên đệm: " + tenDem);
@@ -30,7 +31,7 @@
         } else {
             console.log("giới tính không hợp lệ ");
         }
-
+// tao ten moi bang cach ghep cac tp lai voi nhau 
         console.log("Họ và tên mới :" + ho + " " + tenDem + " " + ten);
     </script>
  </script>
